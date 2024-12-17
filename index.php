@@ -10,11 +10,11 @@ if (!isLoggedIn()) {
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title><?= env("TITLE") ?></title>
+      <title><?= env("TITLE") ?> | Home</title>
       <?php include_once 'includes/external_css.php'; ?>
 </head>
 
-<body>
+<body id="home">
       <?php include_once 'includes/header.php'; ?>
       <main></main>
       <?php include_once 'includes/footer.php'; ?>

@@ -10,11 +10,11 @@ if (isLoggedIn()) {
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title><?= env("TITLE") ?> | Login Page</title>
+      <title><?= env("TITLE") ?> | Login</title>
       <?php include_once 'includes/external_css.php'; ?>
 </head>
 
-<body>
+<body id="login">
       <div class="container mx-auto vh-100 d-flex align-items-center justify-content-center">
             <div class="row">
                   <div class="col-12 text-center mb-3">
