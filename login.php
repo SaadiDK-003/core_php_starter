@@ -28,13 +28,13 @@ if (isLoggedIn()) {
                                     <div class="col-12 mb-3">
                                           <div class="form-group">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="text" name="email" id="email" class="form-control">
+                                                <input type="email" name="email" id="email" class="form-control" required>
                                           </div>
                                     </div>
                                     <div class="col-12 mb-3">
                                           <div class="form-group">
                                                 <label for="password" class="form-label">Password</label>
-                                                <input type="password" name="password" id="password" class="form-control">
+                                                <input type="password" name="password" id="password" class="form-control" required>
                                           </div>
                                     </div>
                                     <div class="col-12">
