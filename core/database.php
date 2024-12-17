@@ -1,4 +1,5 @@
 <?php
+session_start();
 function env($value)
 {
       $env = dirname(__DIR__, 1) . '/.env';
@@ -8,3 +9,7 @@ function env($value)
 $db = mysqli_connect(env("HOST"), env("USER"), env("PWD"), env("DB"));
 $tailwind = env("TAILWIND");
 $alpineJs = env("ALPINE_JS");
+
+require_once 'functions.php';
+
+
