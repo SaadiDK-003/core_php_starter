@@ -30,7 +30,9 @@ if (mysqli_query($db, $sql)) {
         `id` INT NOT NULL,
         `username` VARCHAR(255) NOT NULL,
         `email` VARCHAR(255) NOT NULL,
-        `password` TEXT NOT NULL 
+        `password` TEXT NOT NULL,
+        `role` enum('admin','client') NOT NULL DEFAULT 'client',
+        `status` enum('0','1') NOT NULL DEFAULT '0'
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
 
       if (mysqli_query($conn, $sql)) {
