@@ -31,7 +31,7 @@ if (mysqli_query($db, $sql)) {
         `username` VARCHAR(255) NOT NULL,
         `email` VARCHAR(255) NOT NULL,
         `password` TEXT NOT NULL 
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
 
       if (mysqli_query($conn, $sql)) {
             echo "Table 'users' created successfully<br>";
