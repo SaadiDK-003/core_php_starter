@@ -17,5 +17,14 @@
       var toastElList = [].slice.call(document.querySelectorAll('.toast'))
       var toastList = toastElList.map(function (toastEl) {
             return new bootstrap.Toast(toastEl)
-      })
+      });
+
+      function ToastSuccess(msg) {
+            $("#ToastSuccess").addClass("fade show");
+            $("#ToastSuccess .toast-body").html(msg);
+      }
+
+      $(document).ready(function () {
+            ToastSuccess('test');
+      });
 </script>
