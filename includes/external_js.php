@@ -19,17 +19,19 @@
             return new bootstrap.Toast(toastEl)
       });
 
-      // success
+      // Success
       function ToastSuccess(msg) {
             $("#ToastSuccess").addClass("fade show");
             $("#ToastSuccess .toast-body").html(msg);
       }
 
+      // Warning
       function ToastWarning(msg) {
             $("#ToastWarning").addClass("fade show");
             $("#ToastWarning .toast-body").html(msg);
       }
 
+      // Danger
       function ToastDanger(msg) {
             $("#ToastDanger").addClass("fade show");
             $("#ToastDanger .toast-body").html(msg);
