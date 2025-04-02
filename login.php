@@ -48,6 +48,10 @@ if (isLoggedIn()) {
                                                       class="btn btn-success">LOGIN</button>
                                           </div>
                                     </div>
+                                    <div class="col-12 mt-5 text-center">
+                                          <a href="./forgetPassword.php" class="btn btn-secondary btn-sm">Forget Your
+                                                Password?</a>
+                                    </div>
                               </div>
                         </form>
                   </div>

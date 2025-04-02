@@ -4,7 +4,6 @@ function isLoggedIn()
       return isset($_SESSION['user']) ? true : false;
 }
 
-
 function login($POST)
 {
       global $db;
@@ -24,6 +23,7 @@ function login($POST)
 
       return $msg;
 }
+
 function register($POST)
 {
       global $db;
@@ -60,4 +60,26 @@ function checkEmailExists($email)
       } else {
             return false;
       }
+}
+
+function forgetPassword($email)
+{
+      global $db;
+      $msg = '';
+      $checkQ = $db->query("SELECT * FROM `users` WHERE `email`='$email'");
+      if (mysqli_num_rows($checkQ) > 0) {
+            $bytes = bin2hex(random_bytes(4));
+            $newPwdMD5 = md5($bytes);
+            $db->query("UPDATE `users` SET `password`='$newPwdMD5' WHERE `email`='$email'");
+            $msg = '<h6 class="text-center alert alert-success">Your New Password is: <span class="d-block">' . $bytes . '<span></h6>
+        <script>
+            setTimeout(function(){
+                window.location.href = "./login.php";
+            },10000);
+        </script>
+        ';
+      } else {
+            $msg = '<h6 class="text-center alert alert-danger">Invalid Credentials.</h6>';
+      }
+      return $msg;
 }
