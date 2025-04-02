@@ -19,12 +19,21 @@
             return new bootstrap.Toast(toastEl)
       });
 
+      // success
       function ToastSuccess(msg) {
             $("#ToastSuccess").addClass("fade show");
             $("#ToastSuccess .toast-body").html(msg);
       }
 
-      $(document).ready(function () {
-            ToastSuccess('test');
-      });
+      function ToastWarning(msg) {
+            $("#ToastWarning").addClass("fade show");
+            $("#ToastWarning .toast-body").html(msg);
+      }
+
+      function ToastDanger(msg) {
+            $("#ToastDanger").addClass("fade show");
+            $("#ToastDanger .toast-body").html(msg);
+      }
+
+      $(document).ready(function () { });
 </script>
