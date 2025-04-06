@@ -6,7 +6,7 @@
             <div class="buttons-wrapper d-flex gap-3">
                   <?php if (isLoggedIn()): ?>
                         <?php if ($userRole == "admin"): ?>
-                              <a href="#!" class="btn btn-primary">Dashboard</a>
+                              <a href="./adminDashboard.php" class="btn btn-primary">Dashboard</a>
                         <?php endif; ?>
                         <a href="./logout.php" class="btn btn-danger">LOGOUT</a>
                   <?php else: ?>

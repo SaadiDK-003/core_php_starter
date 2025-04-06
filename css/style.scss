@@ -1,25 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
 :root {
-      --bg-primary: rgb(14, 47, 62);
+  --bg-primary: #0e2f3e;
+  --f-Lexend: "Lexend Deca", sans-serif;
+}
+
+@mixin bg_color_with_opacity($color, $opacity: 1) {
+  background-color: rgba($color: $color, $alpha: $opacity);
 }
 
 html {
-      scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
 }
 
 body {
-      overflow-x: hidden;
+  overflow-x: hidden;
+  font-family: var(--f-Lexend);
+  header {
+    background-color: var(--bg-primary);
+    min-height: 80px;
+  }
 
-      header {
-            background-color: var(--bg-primary);
-            min-height: 80px;
+  main {
+    min-height: 1000px;
+    section {
+      &.hero {
+        min-height: 400px;
+        @include bg_color_with_opacity(#0e2f3e, 0.8);
       }
+    }
+  }
 
-      main {
-            min-height: 1000px;
-      }
-
-      footer {
-            background-color: var(--bg-primary);
-            min-height: 80px;
-      }
+  footer {
+    background-color: var(--bg-primary);
+    min-height: 80px;
+  }
 }

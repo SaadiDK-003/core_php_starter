@@ -1,13 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
 :root {
-  --bg-primary: rgb(14, 47, 62);
+  --bg-primary: #0e2f3e;
+  --f-Lexend: "Lexend Deca", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
 body {
   overflow-x: hidden;
+  font-family: var(--f-Lexend);
 }
 body header {
   background-color: var(--bg-primary);
@@ -15,6 +27,10 @@ body header {
 }
 body main {
   min-height: 1000px;
+}
+body main section.hero {
+  min-height: 400px;
+  background-color: rgba(14, 47, 62, 0.8);
 }
 body footer {
   background-color: var(--bg-primary);
